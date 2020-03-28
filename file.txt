@@ -1,0 +1,54 @@
+ /* get in nodejs */
+ /*var q = url.parse(request.url, true).query;
+     if(q.email===""){
+         console.log("q" + JSON.stringify(q));
+      }
+  else{
+          for(var i=0;i<t.length;i++){
+             if(q.email===t[i].email && q.password===t[i].password ){
+              app.get('/'+url.parse(request.url).query,function(req,resp){
+                    console.log("/email");
+                    var wd= fs.readFileSync('./jsonentreprise.json');
+                    var list= JSON.parse(wd);
+                    
+                    resp.render('pages/ind',{entr: list});
+                    for(var i in list.entreprise ){
+                    console.log("list " + list.entreprise[i].nom);
+                    for(var j in list.entreprise[i].Département){
+                    console.log("list2 " + list.entreprise[i].Département[j].Nom);
+                    }
+                }
+                   });
+                }
+                 }
+                }*/
+                AJAX
+                /*function clicked(){
+    var m=[];
+    var http= new XMLHttpRequest();
+    http.open('GET','./jsoninscris.json',true);
+    if(http.readyState==4 && http.status==200){
+m=JSON.parse(http.responseText);
+        for(var j=0;j<m.length;i++){
+            if()
+        }
+    }
+}*/
+
+/*propriety locals*/
+
+/*app.locals.entreprise=()=>{
+    var wd= fs.readFileSync('./jsonentreprise.json');
+    var list= JSON.parse(wd);
+    return  list;
+}*/
+
+
+    <form action='/m'>
+        <input type="text" name="Matricule" placeholder="Matricule" > <br>
+        <input type="text" name="Nom" placeholder="Nom" > <br>
+        <input type="text" name="Prenom" placeholder="Prenom" > <br>
+        <input type="number" name="Age" placeholder="Age" > <br>
+        <input type="text" name="Salaire" placeholder="Salaire" > <br>
+        <button id="dd1" class="btn btn-info" onclick="this.style.backgroundColor='red'"> Add</button>
+      </form>

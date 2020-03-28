@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>an enteprise apps</title>
+  </head>
+  <body>
+   
+      <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll" href="#page-top">logo</a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+          </div>
+        </div>
+      </nav>
+
+
+<div class="header-container">
+    
+      <img src="https://cdn.hipwallpaper.com/i/1/38/NRITfi.png" alt="header picture" id="header-pic">
+
+         <div class="flip-card">
+        <div class="top-container">
+            <div id="sign-up" onclick="sign()">sign up</div>
+            <div id="log-in" onclick="log()">log in</div>
+        </div> 
+       <div id="flip-card-inner">
+            <form action="/ejs" method="POST" >
+                <div id="inputs-container">
+                    <%if(locals.test){%>
+                        <p class="error"><%=test %></p>
+                        <%}%>
+                <input type="email" placeholder="enter your email" id="email-log" name="email" ><br>
+                <div id="span-div">
+                    <span id="email-error-log">*required</span>
+                </div>
+                <input type="password" placeholder="enter your password" name="password" id="password-log"> <br>
+                <div id="span-div">
+                    <span id="error-password-log">Your password must have numbers , letters and symbols</span>
+                </div><br><br>
+                <button  id="btn-log-in" >log in</button>
+                </div>
+            </form> 
+
+         <div id="flip-card-back">
+        <form action="/" method="POST">
+            <%if(locals.error){%>
+            <p class="error"><%=error %></p>
+            <%}%>
+            <div id="inputs-container1">
+                <input type="text" placeholder="user name" id="user-sign" name="name">
+                <div id="span-div" >
+                    <span id="user-error-sign">*name cabitilaized</span>
+                </div>
+                <input type="email" placeholder="enter your email" id="email-sign"  name="email"> <br>
+                <div id="span-div">
+                    <span id="error-email-sign">*required</span>
+                </div>
+                <input type="password"  id="password-sign" placeholder="enter your password"  name="password">
+                <div id="span-div">
+                    <span id="error-password-sign">Your password must have numbers , letters and symbols</span>  
+                </div><br><br>
+                <button  id="btn-sign-up" >sign up</button> 
+            </div>
+        </form>        
+        </div>
+        </div>
+</div>
+      <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="index.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+

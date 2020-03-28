@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mainstyle.css">
+    <title>an enteprise apps</title>
+  </head>
+  <body>
+   
+      <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll" href="#page-top">logo</a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link js-scroll" href="/">log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+      <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="pictures/pic1.jpg" class="d-block" alt="picture">
+          </div>
+          <div class="carousel-item">
+            <img src="pictures/pic2.jpg" class="d-block" alt="picture">
+          </div>
+          <div class="carousel-item">
+            <img src="pictures/pic3.jpg" class="d-block" alt="picture">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+<div class="blank-div"></div>
+
+<h1 id="title-hear">Les  Entreprises</h1>
+<section id="section2">
+  <%for(var i of entr){%>
+    <div id="first">
+   
+      <div>
+      <img src="pictures/company1.jpg" alt="company">
+    </div>
+    <h1>
+      <%=i.nom%>
+    </h1>
+    <div>
+      <p>Locals est : <span class="spans"> <%= i.locals%></span> </p>
+      <p> descriptions est : <span class="spans"><%=i.descriptions%></p>
+    </div>
+    <%for(var j of i.Département){%>
+      <div id="dDépartement">
+        <form method="POST" action="/new">
+          <button id="btnp3" name="département" value="<%=j.Nom%>">SHOW</button>
+              </form>
+        <h1>Département <span class="spans"> <%= j.Nom%></span> </h1>
+        <p> chef_département  est : <span class="spans"> <%= j.chef_département%></span> </p>
+        <p> description  est : <span class="spans"> <%= j.description%></span> </p>
+      </div>
+      <%}%>
+      <button id="infos" class="btn btn-info" onclick="clickInfo('<%=i.nom%>')"> Add Département</button>
+  </div>
+  <section id="section1">
+    <button id="close" class="btn btn-danger" >close</button>
+    <div class="child" id="émdiv">
+      <form action="/d" method="POST">
+        <h1 id="firstH1"> </h1>
+        <input type="text" id="firstH" name="entreprise" placeholder="enteprise"><br>
+        <input type="text" name="Nom" placeholder="Nom">*<br>
+        <input type="text" name="chef_département" placeholder="chef_département">* <br>
+        <input type="text" name="description" placeholder="description">* <br>
+        <h2> Salarie</h2>
+        <div>
+          <input type="number" name="Matricule" placeholder="Matricule" id="matricule" > <br>
+          <input type="text" name="nomMatricule" placeholder="Nom" > <br>
+          <input type="text" name="Prenom" placeholder="Prenom" > <br>
+          <input type="text" name="Age" placeholder="Age" > <br>
+          <input type="text" name="salaire" placeholder="Salaire">
+        </div>
+        <button id="dd1" class="btn btn-info" onclick="this.style.backgroundColor='green'"> Add departement</button>
+      </form>
+    </div>
+  </section>
+  <%}%>
+</section>
+<div class="blank-div"></div>
+<button id="info" class="btn btn-info"> show</button>
+<div class="blank-div"></div>
+<div class="addcompany mt-5" id="company">Add Entreprise</div>
+
+  <div class="blank-div"></div>
+
+  <div id="company-new">
+    <div id="inner-company-new">
+      <%if(locals.error){%>
+        <p class="error"><%=error%></p>
+        <%}%>
+      <form action="/entre" method="POST">
+      <input type="text" placeholder="company name" name="nom" id="inputs-size"><br>
+      <span>*required</span><br>
+      <input type="text" placeholder="company location" name="locals" id="inputs-size"><br>
+      <span>*required</span><br>
+      <textarea  id="inputs-size" name="descriptions" placeholder="company description"></textarea><br>
+      <span>*required</span><br>
+      <h2> Département</h2>
+      <input type="text" name="Nom" placeholder="Nom" id="inputs-size">*<br>
+      <input type="text" name="chef_département" placeholder="chef_département" id="inputs-size">* <br>
+      <input type="text" name="description" placeholder="description" id="inputs-size">* <br>
+      <h2> Salarie</h2>
+      <div>
+        <input type="number" name="Matricule" placeholder="Matricule"  id="inputs-size" > <br>
+        <input type="text" name="nomMatricule" placeholder="Nom"  id="inputs-size" > <br>
+        <input type="text" name="Prenom" placeholder="Prenom"  id="inputs-size"> <br>
+        <input type="text" name="Age" placeholder="Age"   id="inputs-size"> <br>
+        <input type="text" name="salaire" placeholder="Salaire"  id="inputs-size">
+      </div>
+      <button id="btn-company">create new company</button>
+    </form>
+    </div>
+  </div>
+  
+  <div class="blank-div"></div>
+ 
+  <footer>
+    <div class="footer-container">
+      <div id="first-element">
+          <h1>logo</h1><br>
+          <h3>our website aims to make it easy to mange and add new companies </h3><br>
+          <p>all right reseved from youcode</p>
+      </div>
+      <div id="second-element">
+        <div class="inputs-container">
+          <input type="text" name="" id="footer-email"  placeholder="enter your email"><br>
+          <span id="footer-email-error">*optional</span><br>
+          <textarea name="" id="footer-textarea" placeholder="enter your feedback"></textarea><br>
+          <span id="footer-textarea-error">*optional</span><br><br>
+          <input type="button" value="submmit your feedback" onclick="validatefooterinputs()">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
