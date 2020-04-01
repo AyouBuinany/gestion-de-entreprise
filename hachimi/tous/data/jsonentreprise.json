@@ -1,0 +1,65 @@
+[
+    {
+        "nom": "OCP",
+        "locals": "safi",
+        "descriptions": "2000",
+        "Département": [
+            {
+                "Nom": "departement1",
+                "chef_département": "ayoub",
+                "description": "eee",
+                "liste_matricules": [
+                    {
+                        "Matricule": "1",
+                        "nomMatricule": "Ayoub",
+                        "Prenom": "reda",
+                        "Age": "25 ans",
+                        "salaire": "10000"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "ocsfoot",
+        "locals": "safi",
+        "descriptions": "090099",
+        "Département": [
+            {
+                "Nom": "elbouinanny",
+                "chef_département": "zzz",
+                "description": "ppp",
+                "liste_matricules": [
+                    {
+                        "Matricule": "2",
+                        "nomMatricule": "lmm",
+                        "Prenom": "ayoub",
+                        "Age": "23",
+                        "salaire": "39999"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "nom": "FC",
+        "locals": "coss",
+        "descriptions": "8080",
+        "Département": [
+            {
+                "Nom": "reda",
+                "chef_département": "ayoub",
+                "description": "maroc",
+                "liste_matricules": [
+                    {
+                        "Matricule": "1",
+                        "nomMatricule": "Ayoub",
+                        "Prenom": "yassine",
+                        "Age": "30 ans ",
+                        "salaire": "49999 DH"
+                    }
+                ]
+            }
+        ]
+    }
+]

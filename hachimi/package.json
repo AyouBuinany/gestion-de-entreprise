@@ -1,0 +1,29 @@
+{
+  "name": "lagestion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ihamria/la-gestion-du-capital-humain-des-entreprises.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ihamria/la-gestion-du-capital-humain-des-entreprises/issues"
+  },
+  "homepage": "https://github.com/Ihamria/la-gestion-du-capital-humain-des-entreprises#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "ejs-lint": "^1.0.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
