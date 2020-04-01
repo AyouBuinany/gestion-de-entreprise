@@ -57,17 +57,19 @@
 <section id="section2">
   <%for(var i of entr){%>
     <div id="first">
-   
+      <a href="/delete/<%=i.nom%>" id="you" onclick="return confirm('are u sure <%=i.nom%>?')"> &times;</a>
       <div>
       <img src="pictures/company1.jpg" alt="company">
     </div>
-    <h1>
+    <h1 class="hnom" id="nom">
       <%=i.nom%>
     </h1>
     <div>
       <p>Locals est : <span class="spans"> <%= i.locals%></span> </p>
       <p> descriptions est : <span class="spans"><%=i.descriptions%></p>
     </div>
+    <section class="ss3">
+     <h1 id="entreprise"><%=i.nom%></h1> 
     <%for(var j of i.Département){%>
       <div id="dDépartement">
         <form method="POST" action="/new">
@@ -78,6 +80,8 @@
         <p> description  est : <span class="spans"> <%= j.description%></span> </p>
       </div>
       <%}%>
+    </section>
+    <button id="infos" class="info btn btn-info"> show</button>
       <button id="infos" class="btn btn-info" onclick="clickInfo('<%=i.nom%>')"> Add Département</button>
   </div>
   <section id="section1">
@@ -104,7 +108,7 @@
   <%}%>
 </section>
 <div class="blank-div"></div>
-<button id="info" class="btn btn-info"> show</button>
+<div id="dshow"><button id="inf" class="btn btn-info"> Show All</button></div>
 <div class="blank-div"></div>
 <div class="addcompany mt-5" id="company">Add Entreprise</div>
 
@@ -171,8 +175,6 @@
     <script src="index.js"></script>
   </body>
 </html>
-
-
 
 
 

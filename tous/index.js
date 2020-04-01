@@ -203,8 +203,7 @@ function validfeedbackfooter(){
 }
 
 $(document).ready(function(){
-    
-   $('#button-addon2').click(function (){ 
+   $('#button-addon2').click(function (){
          var NomSalarie =$('.nomMatricule');
        //  console.log($('.nomMatricule').innerText);
         var recherch=$('#recherche');
@@ -214,24 +213,37 @@ $(document).ready(function(){
           $(NomSalarie[i]).parents('.divs').toggleClass("dsalarie");
         }
     }
-}
-   );
+});
     $('#close').click(function(){
         $('#section1').toggle();
         $('#firstH1').text("");
         $('#firstH').val("");
     });
-    $('#info').click(function(){
-        $('#dDépartement').toggle(1000);
-        $(this).text('Hide').click(function(){
-            if($(this).text()==='Hide'){
-$(this).text('show');
-            }
-else{
-    $(this).text('Hide');
-}
+
+    //show département de tous les  entreprises
+    $('#inf').click(function(){
+        $('.ss3').toggle(1000);
+        $(this).text('Hide All').click(function(){
+            if($(this).text()==='Hide All'){
+        $(this).text('Show All');
+            }else{
+            $(this).text('Hide All');
+        }
         });
-    });
+            });
+//show département de un entreprise
+            $('.info').click(function(){
+                var departement= $('.ss3');
+                $(this).prev().toggle();
+                 $(this).text('Hide').click(function(){
+                     if($(this).text()==='Hide'){
+         $(this).text('show');
+                     }
+         else{
+            $(this).text('Hide');
+        }
+                });
+            });
     $("#footer-textarea").keyup(function(){
         if(validfeedbackfooter()){
             $("#footer-textarea-error").css("color","green");
@@ -241,33 +253,12 @@ else{
             $("#footer-textarea-error").html("your feedback is too short");
         }
     });
-   
 
-/*$('#dd1').click(function(){
-    var list=[];
-       var section2=$('#section2');
-       var elem="<div id='dsection2'>";
-        $.ajax({
-            method:'GET',
-            url:'/jsonentreprise.json',success:function(data){
-                    list=JSON.parse(data);
-                    for(var i in list.entreprise){
-                        elem += "<h1> Entreprise :" + "<span>" + list.entreprise[i].nom + "</span>" + "</h1>";
-                        elem +="<div> locals : " +  + list.entreprise[i].locals + "<br> description : "+ list.entreprise[i].description + "<br> <button id='département' class='btn-default'> Département </button>"  + "</div>";
-                        elem += "</div>"
-                   }
-                   console.log('elem');
-                   
-               }
-            
-        });
-       section2.append(elem);
-});*/
 });
 
 
 function validatefooterinputs(){
-    if ((validfeedbackfooter()==true) || (validmailfooter()==true) ){
+    if ((validfeedbackfooter()==true) &&(validmailfooter()==true) ){
         alert("your feedback has been sent successfully ");
     }
     else{

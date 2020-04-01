@@ -57,8 +57,8 @@
       </div>
 
 <div class="blank-div"></div>
-
 <div class="blank-div"></div>
+
 <%if(locals.entreprise && locals.département)%>
     <h1 id="title-hear">   <%=entreprise%>  Le Département est: <span> <%=département%></span>  </h1>
 
@@ -91,9 +91,8 @@
 <div id="company-new">
   <div id="inner-company-new">
     <form action="/salarie" method="POST">
-        <input type="text" placeholder="département" name="entreprise" id="inputs-size" value="<%=entreprise%>" ><br>
-        <input type="text" placeholder="département" name="département" id="inputs-size" value="<%=département%>" ><br>
-        <input type="number" placeholder="salarie Matricule" name="Matricule" id="inputs-size"><br>
+        <input type="text" placeholder="département" name="entreprise" id="inputs-size" value="<%=entreprise%>"  readonly><br><br>
+        <input type="text" placeholder="département" name="département" id="inputs-size" value="<%=département%>" readonly><br><br>
     <span>*required</span><br>
     <input type="text" placeholder="salarie Nom" name="nomMatricule" id="inputs-size"><br>
     <span>*required</span><br>
@@ -103,6 +102,7 @@
     <span>*required</span><br>
     <input type="text" placeholder="salaire" name="salaire" id="inputs-size"><br>
     <span>*required</span><br>
+    <div class="blank-div1"></div>
     <button id="btn-company">create new Salarie</button>
   </form>
   </div>

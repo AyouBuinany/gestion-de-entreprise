@@ -55,6 +55,10 @@ body{
 .navbar-toggler:active {
   outline: 0;
 }
+.nav-link{
+  margin-top: 8px;
+}
+
 .navbar-toggler span {
   display: block;
   background-color: #fff;
@@ -147,29 +151,30 @@ body{
     margin-top: 2%;
   }
 }
-
-.addcompany{
-  display: flex;
-  width: 9%;
+#company{
+  width: 30%;
   margin: auto;
+}
+.addcompany{
   text-align: center;
-  height: auto;
-  background-color: #138496;
+  flex-basis: 46%;
+  background-color: #17a2b8;
+  border-radius: 4px;
   border: none;
   color: white;
   padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 5px black;
   cursor: pointer;
-  justify-content: center;
+  position: relative;
+  bottom: 24px;
 }
 .addcompany:hover{
-  opacity: 0.7;
+ background-color: #138496;
 }
 
 @media only screen and (max-width: 1456px){
   .addcompany{
     width: 20%;
+    text-align: center;
   }
 }
 
@@ -179,6 +184,12 @@ body{
   box-shadow: 0px 0px 11px;
   padding: 2%;
   display: none;
+}
+#company-new h2{
+  background-color: aqua;
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
 }
 #inner-company-new{
   position: relative;
@@ -199,6 +210,7 @@ body{
   width: 80%;
   box-shadow: 0px 0px 6px black;
   border: none;
+  padding: 7px;
 }
 #btn-company:hover{
   background-color: limegreen;
@@ -248,17 +260,17 @@ body{
   text-shadow: 10px 10px 8px grey;
 }
 #section1{
-  width: 90%;
-   z-index: 10;
-    align-items: center;
-    justify-content: space-around;
-    background-color: gray;
-    margin: auto;
-    position: fixed;
-    top: 100px;
-    left: 50px;
-    display: none;
-    box-shadow: 6px 10px 7px #80808070;
+  width: 80%;
+  z-index: 10;
+  align-items: center;
+  justify-content: space-around;
+  background-color: gray;
+  margin: auto;
+  position: fixed;
+  top: 100px;
+  left: 10%;
+  display: none;
+  box-shadow: 6px 10px 7px #80808070;
 animation: animAlert 5s infinite ease-in-out;
 }
 @keyframes animAlert{
@@ -271,9 +283,9 @@ animation: animAlert 5s infinite ease-in-out;
 }
 #section1 .child {
   border: 1px solid white;
-  width: 40%;
-  height: 80%;
-  text-align: center;
+  width: 100%;
+  padding: 1%;
+  background-color: slategrey;
 }
 #section1 h1{
   font-size: 20px;
@@ -284,36 +296,65 @@ animation: animAlert 5s infinite ease-in-out;
 }
 #section1 div button{
 margin-top: 15px;
-
+}
+.all-btn{
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-around;
 }
 #section2{
   display: flex;
-  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 900px){
+#section2{
+  flex-direction: column;
+  position: relative;
+  width: 200%;
+  left: 26%;
+}
 }
 #section2 h1{
-  font-family: fantasy;
-    text-shadow: 8px 9px 10px grey;
-    color: antiquewhite;
+  font-family: serif;
+    text-shadow: 0px 5px 2px #988d8d;
+    color: black;
+    padding: 11px;
     font-size: 25px;
+}
+
+.blank-div1{
+  width: 100%;
+  height: 30px;
 }
 .spans{
   font-weight: bold;
-    text-decoration: underline;
-    color: white;
+  text-decoration: underline;
+
 }
 #section2 #first{
-background: linear-gradient(10deg, #9E9E9E, #607D8B);
 box-shadow: 5px 11px 25px;
-width: 20%;
+width: 24%;
 text-align: center;
+margin-top: 18px;
 }
 #section2 #first div img:first-child{
   width: 100%;
 }
 #info{
-  display: flex;
-  align-items: center;
-  margin: auto;
+  text-align: center;
+  flex-basis: 46%;
+  height: fit-content;
+  position: relative;
+  top: 25px;
+}
+@media (max-width: 547px) {
+#info{
+  padding: 18px;
+}
 }
 #infos{
   margin-bottom: 15px;
@@ -327,9 +368,6 @@ text-align: center;
   border: 1px dotted white;
   margin: 10px;
 }
-#dDépartement{
-  display: none;
-}
 #j2{
   display: none;
 }
@@ -337,38 +375,41 @@ text-align: center;
   text-align: center;
 }
 #émdiv input{
-  margin: 3px;
-  border-radius: -2px;
-  border: none;
-  background-color: #b4adad;
-  color: white;
-  border-radius: 3px;
+  width: 68%;
+    margin-top: 10px;
+    border: none;
 }
 #btnp3{
   border: none;
     background-color: transparent;
     color: #673AB7;
-    float: right;
     text-decoration: underline;
 }
 #section5{
-  height: 300px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  }
+  @media (max-width: 800px) {
+    #section5{
+      flex-direction: column ;
+    }
   }
   .divs{
-      width: 35%;
-      height: 70%;
+     flex-basis: 25%;
+      padding: 2%;
       background: linear-gradient(60deg, gray, #138496);
       box-shadow: 9px 8px 9px grey;
       margin: 20px;
-      display: flex;
+      display: grid;
       color: antiquewhite;
   }
   #infor{
   font-size: 12px;
   margin-top: 30px;
-  
+
   }
   #htitle{
       font-size: 15px;
@@ -385,8 +426,10 @@ text-align: center;
       margin: 20px;
   }
   #mb-3{
-    width: 40%;
-    margin-left: 130px;
+    width: 30%;
+    position: relative;
+    top: 10px;
+    left: 28%;
   }
   .dsalarie{
     box-shadow: -10px 8px 9px #abc1c8;
@@ -401,3 +444,25 @@ text-align: center;
 
 }
   }
+
+  #dshow{
+    text-align: center;
+  }
+
+#you{
+  color: white;
+  float: left;
+    width: 22px;
+    position: relative;
+    top: 0px;
+    text-decoration: none;
+    left: -10px;
+    border-radius: 50%;
+    background: linear-gradient(70deg, #a01515, #e47272);
+}
+#info{
+  margin-bottom: 10px;
+}
+.ss3{
+display: none;
+}
