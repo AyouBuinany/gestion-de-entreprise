@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Landing PAGE Html5 Template">
+    <meta name="keywords" content="landing,startup,flat">
+    <meta name="author" content="Made By GN DESIGNS">
+
+    <title>Home Page</title>
+
+    <!-- // PLUGINS (css files) // -->
+   
+    <link href="./js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="./js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <!--// ICONS //-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--// BOOTSTRAP & Main //-->
+    <link href="./bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="./nodejs/SignUp.js"></script>
+</head>
+
+<body>
+
+    <!--======================================== 
+           Preloader
+    ========================================-->
+    <div class="page-preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!--======================================== 
+           Header
+    ========================================-->
+
+    <!--//** Navigation**//-->
+    <nav class="navbar navbar-default navbar-fixed white no-background bootsnav navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#brand">
+                    <img src="./img/logoprogestion.png" class="logo" alt="logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active scroll"><a href="#home">Home</a></li>
+                    <li class="scroll"><a href="#about">About</a></li>
+                    <li class="scroll"><a href="#services">Services</a></li>
+                   <li class="scroll"><a href="#contact">Contact</a></li>
+                  
+
+                    
+                    <li class="button-holder">
+                        <button type="button" class="btn btn-blue navbar-btn" data-toggle="modal" data-target="#SignIn" onclick="window.location.href = '/login';" >Sign in</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <!--//** Banner**//-->
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <!-- Introduction -->
+                <div class="col-md-6 caption">
+                    <h1>Welcome To ProGestion</h1>
+                    <h2>
+                           I am 
+                            <span class="animated-text"></span>
+                            <span class="typed-cursor"></span>
+                        </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, quibusdam. Sit, quas tempora quia officia!</p>
+                    <a href="#" class="btn btn-transparent">Get Started</a>
+                    
+                    </a>
+                </div>
+                <!-- Sign Up -->
+                <div class="col-md-5 col-md-offset-1" name="registration" action='/user_create' method="POST">
+                    <div id="alert" class="alert alert-warning" style="visibility:hidden">
+                        <strong>Vous devez remplir le formulaire d'inscription</strong>
+                      </div>
+                    <div class="signup-form">
+                        <h2 class="text-center">Signup Now</h2>
+                        <hr>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Full Name">
+                        </div>
+                        <div class="form-group"> 
+                            <input type="email" class="form-control"id="email" name="email" placeholder="Email Address" >
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control"id="password" name="password" placeholder="password" >
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="confirm" name="pconfirm" placeholder="Confirm password" >
+                        </div>
+                        <div class="form-group text-center">
+                            
+                            <input type="button" id="submit1" class="btn btn-blue btn-block" value="Sign Up" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--======================================== 
+           About Us
+    ========================================-->
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, optio.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">favorite</i>
+                        <h4>Simple To Use</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima, dicta quaerat sit cupiditate eum mollitia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">flash_on</i>
+                        <h4>Powerful</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima, dicta quaerat sit cupiditate eum mollitia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">settings</i>
+                        <h4>Easy To Customize</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas minima, dicta quaerat sit cupiditate eum mollitia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--======================================== 
+           Story
+    ========================================-->
+
+    <section id="story">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Img -->
+                <div class="col-md-6 story-bg">
+                </div>
+                <!-- Story Caption -->
+                <div class="col-md-6">
+                    <div class="story-content">
+                        <h2>Our Success Story</h2>
+                        <p class="story-quote">
+                            " Success is finding satisfaction in giving a little more than you take."
+                        </p>
+                        <div class="story-text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis amet consequatur incidunt, alias odit quisquam laborum nemo nisi, vel, tempora eligendi enim voluptate accusamus libero voluptas commodi ex rerum dolorem!</p>
+                        </div>
+                        <a href="#" class="btn btn-white">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--======================================== 
+           Services
+    ========================================-->
+
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, optio.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="material-icons">thumb_up</i>
+                        <h4>Great Quality</h4>
+                        <p>Quality ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="material-icons">euro_symbol</i>
+                        <h4>Best Price</h4>
+                        <p>Price ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="material-icons">forum</i>
+                        <h4>24/7 Support</h4>
+                        <p>Support ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="icon-box">
+                        <i class="material-icons">view_carousel</i>
+                        <h4>UX/UI Design</h4>
+                        <p>Quality ipsum dolor sit amet, consectetur adipisicing elit. Beatae quod error quis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!--======================================== 
+           Contact
+    ========================================-->
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+            <p>sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+        </div>
+        <!-- Contact Info -->
+        <div class="container contact-info">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">place</i>
+                        <h4>Address</h4>
+                        <p>PABox 13592, Lorem Street Ipsum Dolor, Victoria 8007, USA</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">phone</i>
+                        <h4>Call Us On</h4>
+                        <p>1-834-527-6940</p>
+                        <p>1-834-527-6940</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-box">
+                        <i class="material-icons">email</i>
+                        <h4>Email us on</h4>
+                        <p>lorem@xyz.com</p>
+                        <p>lorem@xyz.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Google Map -->
+        <div id="map"></div>
+        <!-- Contact Form -->
+        <div class="contact-forms">
+            <div class="container">
+                <h2>Drop us a Line</h2>
+                <form class="contact-form">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Full Name" required="required">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" required="required">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-blue">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!--======================================== 
+           Footer
+    ========================================-->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-caption">
+                    <img src="./img/progestion1.png" class="img-responsive center-block" alt="logo">
+                    <hr>
+                    <h5 class="pull-left">Vortex, &copy;2016 All rights reserved</h5>
+                    <ul class="liste-unstyled pull-right">
+                        <li><a href="#facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#instagram"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--======================================== 
+           Modal
+    ========================================-->
+    
+    <!-- Modal -->
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="./js/plugins/bootsnav_files/js/bootsnav.js"></script>
+    <script src="./js/plugins/typed.js-master/typed.js-master/dist/typed.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    
+    <script src="./js/main.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="Css/login.css">
+  <!-- Bootstrap CSS -->
+  <link href="./js/plugins/bootsnav_files/skins/color.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/animate.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/bootsnav.css" rel="stylesheet">
+    <link href="./js/plugins/bootsnav_files/css/overwrite.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="./js/plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="./js/plugins/Magnific-Popup-master/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <!--// ICONS //-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--// BOOTSTRAP & Main //-->
+    <link href="./bootstrap-3.3.7/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="./nodejs/Login.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed white no-background bootsnav navbar-scrollspy" data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#brand">
+                    <img src="./img/logoprogestion.png" class="logo" alt="logo">
+                </a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="button-holder">
+                        <button type="button" class="btn btn-blue navbar-btn" data-toggle="modal" data-target="#SignIn" onclick="window.location.href = '/signUp';" >Signup</button>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+     
+    <div  id="home">
+        
+  <div  id="SignIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    
+    <div class="modal-dialog" role="document">
+        <div id="alert" class="alert alert-warning" style="visibility:hidden">
+            <strong>Vous devez remplir le formulaire</strong> 
+          </div>
+        <div class="modal-content">
+            <div class="modal-header">
+               
+              
+                <h4 class="modal-title text-center" id="myModalLabel">Sign In</h4>
+            </div>
+            
+            <div class="modal-body">
+                <form class="signup-form" action="/login" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Full Name">
+                       
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control"id="password" name="password" placeholder="password" >
+                        
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" id="submit2" class="btn btn-blue btn-block">Log In</button>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./bootstrap-3.3.7/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./js/plugins/owl-carousel/owl.carousel.min.js"></script>
+<script src="./js/plugins/bootsnav_files/js/bootsnav.js"></script>
+<script src="./js/plugins/typed.js-master/typed.js-master/dist/typed.min.js"></script>
+<script src="./maps.googleapis.com/maps/api/js"></script>
+
+<script src="./js/main.js"></script>
+</body>
+
+</html>
